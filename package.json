@@ -1,0 +1,24 @@
+{
+  "name": "currency_trading",
+  "version": "1.0.0",
+  "description": "currency trading bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "currency",
+    "trading",
+    "forex",
+    "finance",
+    "investing"
+  ],
+  "author": "Kwaku Sarpong Manu",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^6.14.10"
+  },
+  "devDependencies": {
+    "brain.js": "^2.0.0-beta.2"
+  }
+}
