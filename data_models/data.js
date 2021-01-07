@@ -1,8 +1,8 @@
-var OHLV_model = [
-    {
+exports.OHLV_model = new function() {
+    return {
         input:
         {
-            date: new Date.now(),
+            // date: Date(),    // exclude for now ..07/01/2021
             open: 0.00,
             high: 0.00,
             low: 0.00,
@@ -12,4 +12,4 @@ var OHLV_model = [
             close:0.00,
         }
     }
-]
+}
