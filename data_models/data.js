@@ -1,15 +1,15 @@
-exports.OHLV_model = new function() {
+exports.OHLV_model = function() {
     return {
         input:
         {
-            // date: Date(),    // exclude for now ..07/01/2021
-            open: 0.00,
-            high: 0.00,
-            low: 0.00,
-            volume:0.00,
+            // Date: Date(),    // exclude for now ..07/01/2021
+            Open: 0.00,
+            High: 0.00,
+            Low: 0.00,
+            Volume:0.00,
         },
         output:{
-            close:0.00,
+            Close:0.00,
         }
     }
 }
