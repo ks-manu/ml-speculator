@@ -17,10 +17,14 @@ const data_parser = require('./data_parser.js'); // import data parser
 var net;
 var data;
 async function init(){
-    return agent.RNNTimeStep(config.config);      // instantiate neural network
+    console.log("done")
+    net = agent.RNNTimeStep(config.config);      // instantiate neural network
+    // console.log(net.toJSON())
+    return net;
 }
 
 async function datahub(){      // prepare data
+    console.log("done 2")
     return await data_parser.parse();
 }
 
