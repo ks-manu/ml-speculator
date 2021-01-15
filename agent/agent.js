@@ -6,48 +6,55 @@ const brain = require('brain.js');      // create supporting environment
 // GRUTimeStep
 // LSTMTimeStep
 
-exports.RNN = function(config) {
-    return new brain.NeuralNetwork(config);
-}
-exports.RNNTimeStep = function(config){
-    return new brain.recurrent.RNNTimeStep(config);
+exports.NN = function() {  // Good at generalisation and simple pattern recognition
+    return new brain.NeuralNetwork();
 }
 
-exports.GRUTimeStep = function(config){
-    return new brain.recurrent.GRUTimeStep(config);
+exports.NN_GPU = function () { // RNN using GPU for computation
+    return new brain.NeuralNetworkGPU();
 }
 
-exports.LSTMTimeStep = function(config){
-    return new brain.recurrent.LSTMTimeStep(config);
+exports.GRU = function () {
+    return new brain.recurrent.GRU();
 }
 
-class Agent {
-    // Agent();
-    net;
-    config = {};
-
-    setConfigs(configs) {
-        config = configs
-    }
-
-    setNetType(type){
-        switch(type){
-            case 'RNN':
-                net = brain.recurrent.RNNTimeStep;
-            case 'LSTM':
-                net = brain.recurrent.LSTMTimeStep;
-            case 'GRU':
-                net = brain.recurrent.GRUTimeStep;
-            default:
-                net = brain.recurrent.RNNTimeStep;
-        }
-    }
-
-    trainNet(data){
-        this.net.train(data, this.config);
-    }
-
-    runNet(data){
-        return this.net.run(data);
-    }
+exports.LSTM = function () {
+    return new brain.recurrent.LSTM();
 }
+
+exports.RNNTimeStep = function(){
+    return new brain.recurrent.RNNTimeStep();
+}
+
+exports.GRUTimeStep = function(){
+    return new brain.recurrent.GRUTimeStep();
+}
+
+exports.LSTMTimeStep = function(){
+    return new brain.recurrent.LSTMTimeStep();
+}
+
+// class Agent{
+//     var net;
+//     var config = {};
+
+//     setConfigs(configs) {
+//         config = configs
+//     }
+
+//     setNetType(type){
+//         switch(type){
+//             case 'RNN':
+//                 net = brain.recurrent.RNNTimeStep;
+//             case 'LSTM':
+//                 net = brain.recurrent.LSTMTimeStep;
+//             case 'GRU':
+//                 net = brain.recurrent.GRUTimeStep;
+//             default:
+//                 net = brain.recurrent.RNNTimeStep;
+//         }
+//     }
+
+//     trainNet(data){
+//         this.net.train(data, this.config);
+//     }
