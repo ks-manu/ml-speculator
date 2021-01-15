@@ -7,7 +7,7 @@ exports.OHLV_model = function () {
             Open: 0.00,
             High: 0.00,
             Low: 0.00,
-            Volume:0.00,
+            // Volume:0.00, // causes 'confusion' in predictions likely due to poor correlation
         },
         output:{
             Close:0.00,
