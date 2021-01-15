@@ -41,7 +41,7 @@ exports.parse = function(req, st="OHLV") {
             return dataset.on('end', function () {  //resolve(results)
                 resolve(results);
             });
-        }else if(st=="MA"){
+        }else if(st=="SMA"){
             dataset.on('data', (row) => {
                 var model = new data_model.Moving_Average_Model;
     
